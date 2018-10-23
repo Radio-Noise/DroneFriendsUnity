@@ -6,7 +6,7 @@ public class CameraController : MonoBehaviour {
 
     void Start()
     {   
-        GameObject.Find("Camera").transform.position = new Vector3(0, 0, -18);
+        GameObject.Find("Camera").transform.position = new Vector3(0, 0, -17);
         GameObject.Find("Camera").transform.rotation = new Quaternion(0, 0, 0, 0);
         XRDevice.DisableAutoXRCameraTracking(target, true);
     }
