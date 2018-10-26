@@ -13,7 +13,7 @@ public class CapCam : MonoBehaviour {
 
         for (int i = 0; i < devices.Length; i++)    //デバイスの名前の文字数分ループさせる
         {
-            if (devices[i].name.Contains("AVerMedia") )      //デバイスの名前にAVerMadeiaが含まれていたら
+            if (devices[i].name.Contains("AVerMedia")|| devices[i].name.Contains("Camera"))      //デバイスの名前にAVerMadeiaかが含まれていたら
             {
                 CameraName = devices[i].name;       //読み取ったデバイスの名前を代入
             }
@@ -29,6 +29,7 @@ public class CapCam : MonoBehaviour {
             var capcamTexture = new WebCamTexture(CameraName, Width, Height, FPS);      //定義した、幅、高さ、FPSをcapcamTextureに代入
             GetComponent<Renderer>().material.mainTexture = capcamTexture;      //代入した幅、高さ、FPSを送る
             capcamTexture.Play();           //capcamTextureを動作させる
+        
         }
     }
 }
