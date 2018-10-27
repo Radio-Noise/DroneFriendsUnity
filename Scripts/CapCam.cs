@@ -13,7 +13,7 @@ public class CapCam : MonoBehaviour {
 
         for (int i = 0; i < devices.Length; i++)    //デバイスの名前の文字数分ループさせる
         {
-            if (devices[i].name.Contains("AVerMedia")|| devices[i].name.Contains("Camera"))      //デバイスの名前にAVerMadeiaかが含まれていたら
+            if (devices[i].name.Contains("AVerMedia")|| devices[i].name.Contains("Webcam"))      //デバイスの名前にAVerMadeiaかが含まれていたら
             {
                 CameraName = devices[i].name;       //読み取ったデバイスの名前を代入
             }
